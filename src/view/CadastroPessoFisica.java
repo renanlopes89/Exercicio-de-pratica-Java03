@@ -62,8 +62,9 @@ public class CadastroPessoFisica extends JFrame{
 	JLabel label_cpf = new JLabel("CPF");
 	JFormattedTextField cpf = null;
 	
-	JButton cadastrar = new JButton("cadastrar");
+	JButton salvar = new JButton("salvar");
 	JButton limpar = new JButton("limpar");
+	JButton imprimir = new JButton("imprimir");
 	
 	private ButtonGroup group = new ButtonGroup();
 	
@@ -204,11 +205,14 @@ public class CadastroPessoFisica extends JFrame{
 		pane.add(cpf);
 		cpf.setBounds(20,540,300,50);
 		
-		pane.add(cadastrar);
-		cadastrar.setBounds(350,540,140,50);
-				
+		pane.add(salvar);
+		salvar.setBounds(350,540,140,50);
+		
+		pane.add(imprimir);
+		imprimir.setBounds(507,540,140,50);
+		
 		pane.add(limpar);
-		limpar.setBounds(507,540,140,50);
+		limpar.setBounds(350,600,297,50);
 		limpar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				nome.setText("");
@@ -225,7 +229,7 @@ public class CadastroPessoFisica extends JFrame{
 		
 		this.setLayout(null); // metodo responsavel por definir o posicionamento dos objetos no layout
 		this.setVisible(true); // responsavel por deixar a tela visivel
-		this.setSize(700,700); // dimensões da tela 
+		this.setSize(700,720); // dimensões da tela 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 	}
