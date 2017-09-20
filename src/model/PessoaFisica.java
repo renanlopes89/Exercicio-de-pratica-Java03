@@ -1,7 +1,7 @@
 package model;
 
 public class PessoaFisica {
-	String nome, endereco, bairro, cidade, uf, telefone, celular, rg, cpf;
+	String nome, endereco, cep, bairro, cidade, uf, telefone, celular, rg, cpf;
 	char sexo;
 	
 	
@@ -23,6 +23,15 @@ public class PessoaFisica {
 		this.endereco = endereco;
 	}
 	
+	// Método GET e SET para CEP
+	public String getCEP(){
+		return cep;
+	}
+		
+	public void setCEP(String cep){
+		this.cep = cep;
+	}
+	
 	// Método GET e SET para bairro
 	public String getBairro(){
 		return bairro;
@@ -31,7 +40,6 @@ public class PessoaFisica {
 	public void setBairro(String bairro){
 		this.bairro = bairro;
 	}
-	
 	
 	// Método GET e SET para cidade
 	public String getCidade(){

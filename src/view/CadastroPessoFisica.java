@@ -68,6 +68,8 @@ public class CadastroPessoFisica extends JFrame{
 	
 	private ButtonGroup group = new ButtonGroup();
 	
+	model.PessoaFisica pessoaFisica = new model.PessoaFisica();
+	
 	public CadastroPessoFisica() {
 		
 		super("Cadastro de Pessoa Física");
@@ -207,6 +209,22 @@ public class CadastroPessoFisica extends JFrame{
 		
 		pane.add(salvar);
 		salvar.setBounds(350,540,140,50);
+		limpar.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				pessoaFisica.setNome(nome.getText());
+				pessoaFisica.setEndereco(endereco.getText());
+				pessoaFisica.setCEP(cep.getText());
+				pessoaFisica.setBairro(bairro.getText());
+				pessoaFisica.setCidade(cidade.getText());
+				//pessoaFisica.setUF(uf.getText());
+				pessoaFisica.setTelefone(telefone.getText());
+				pessoaFisica.setCelular(celular.getText());
+				//pessoaFisica.setSexo(sexo.getText());
+				pessoaFisica.setRG(rg.getText());
+				pessoaFisica.setCPF(cpf.getText());
+			}
+		});
+		
 		
 		pane.add(imprimir);
 		imprimir.setBounds(507,540,140,50);
